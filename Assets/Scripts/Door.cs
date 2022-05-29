@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Door: MonoBehaviour
+public class Door: Furniture
 {
-    public void onClickDoor(){
-        Debug.Log("Clicked Door");
+    
+    override public void onClickAction(){
+        Debug.Log("Clicked"); 
+
     }
 }

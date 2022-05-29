@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Desk: MonoBehaviour
+public class Desk: Furniture
 {
-    public void onClickDesk(){
-        Debug.Log("Clicked Desk");
+    override public void onClickAction(){
+        Destroy(gameObject);
     }
 }

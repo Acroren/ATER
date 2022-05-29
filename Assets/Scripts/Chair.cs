@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chair: MonoBehaviour
+public class Chair: Furniture
 {
-    public void onClickChair(){
-        Debug.Log("Clicked Chair");
+    override public void onClickAction(){
+        Destroy(gameObject);
     }
+
 }

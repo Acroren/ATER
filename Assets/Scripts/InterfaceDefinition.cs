@@ -4,6 +4,8 @@ using UnityEngine;
 
 public interface IClicked
 {
+    
     void onClickAction();
-    void onZone();
+    void enterZone();
+    void exitZone();
 }
