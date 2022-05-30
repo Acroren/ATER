@@ -7,6 +7,9 @@ TagManager:
   - Chair
   - Door
   - ObjectCamera
+  - Front
+  - Back
+  - Light
   layers:
   - Default
   - TransparentFX

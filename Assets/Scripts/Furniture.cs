@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Furniture : MonoBehaviour, IClicked
 {
-    private Renderer render;
-    private Camera mainCamera;
-    private Vector3 mainCameraPosition;
+    public Renderer render;
+    public Camera mainCamera;
+    public Vector3 mainCameraPosition;
+    public bool isBig = false;
+    //private Vector3 mainCameraPosition = new Vector3(0, 7, -5);
     public  Vector3 objectCameraPosition = new Vector3(0, 0, 0);
 
     private void Start() {
@@ -17,6 +19,7 @@ public class Furniture : MonoBehaviour, IClicked
 
     virtual public void onClickAction(){
         Debug.Log("Clicked");
+        Arrow.rotar = false;
         //cambiar posicion de la camara
         mainCamera.transform.position = objectCameraPosition;
     }

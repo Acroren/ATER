@@ -5,6 +5,6 @@ using UnityEngine;
 public class Desk: Furniture
 {
     override public void onClickAction(){
-        Destroy(gameObject);
+       
     }
 }
