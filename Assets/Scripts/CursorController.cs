@@ -27,7 +27,7 @@ public class CursorController : MonoBehaviour
         controls = new CursorControls();
         ChangeCursor(cursor);
         Cursor.lockState = CursorLockMode.Confined; //Confinar en la ventana
-        mainCamera = Camera.main;
+        mainCamera = GameController.mainCamera;
         //Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
     }
     

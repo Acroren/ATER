@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Chair: Furniture
 {
+    /*
     override public void onClickAction(){
-        Destroy(gameObject);
+        
     }
-
+    */
 }
