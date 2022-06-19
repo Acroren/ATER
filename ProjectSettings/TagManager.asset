@@ -10,6 +10,9 @@ TagManager:
   - Front
   - Back
   - Light
+  - BIGChair
+  - BIGDesk
+  - BIG
   layers:
   - Default
   - TransparentFX
