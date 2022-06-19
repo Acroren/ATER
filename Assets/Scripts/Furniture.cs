@@ -9,7 +9,7 @@ public class Furniture : MonoBehaviour, IClicked
     public Vector3 mainCameraPosition;
     public bool isBig = false;
     //private Vector3 mainCameraPosition = new Vector3(0, 7, -5);
-    public  Vector3 objectCameraPosition = new Vector3(0, 0, 0);
+    public  Vector3 objectCameraPosition = new Vector3(64, 10, 0);
 
     private void Start() {
         render = GetComponent<Renderer>();
@@ -24,11 +24,11 @@ public class Furniture : MonoBehaviour, IClicked
         mainCamera.transform.position = objectCameraPosition;
     }
 
-    public void enterZone(){
+    virtual public void enterZone(){
         render.material.color=Color.black;
     }
 
-    public void exitZone(){
+    virtual public void exitZone(){
         render.material.color= Color.white;
     }
 }

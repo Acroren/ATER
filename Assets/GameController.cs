@@ -12,8 +12,12 @@ public class GameController : MonoBehaviour
     public GameObject RoomAux;
     public static GameObject[] goFront;
     public static GameObject[] goBack;
+    public static GameObject[] goBig;
     public static GameObject luz;
     //luz publica
+
+    //private static string currentObjectTag = "";
+    private static GameObject currentBigObject;
 
 
     private void Awake() {
@@ -21,6 +25,7 @@ public class GameController : MonoBehaviour
         Room = RoomAux;
         goFront = GameObject.FindGameObjectsWithTag("Front");
         goBack = GameObject.FindGameObjectsWithTag("Back");
+        goBig = GameObject.FindGameObjectsWithTag("BIG");
         luz = GameObject.FindWithTag("Light");
     }
     
@@ -28,14 +33,19 @@ public class GameController : MonoBehaviour
     {
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = targetFrameRate;
+        //hide all back objects
         foreach (GameObject go in goBack)
+            {
+                go.SetActive(false);
+            }
+        //hide all big objects
+        foreach (GameObject go in goBig)
             {
                 go.SetActive(false);
             }
     }
 
     public static void rotar(){
-        
         if (frente == true){
             mainCamera.transform.rotation = Quaternion.Euler(25, 180, 0);
             mainCamera.transform.position = new Vector3(-1, 2, -5);
@@ -68,6 +78,26 @@ public class GameController : MonoBehaviour
             frente = true;
         }
 
+    }
+
+    public static void hideObject(){
+        try{
+            currentBigObject.SetActive(false);
+        } catch (System.Exception e){
+            Debug.Log("No hay objeto activo");
+
+        }
+    }
+
+    public static void showObject(string name){
+        //Select the object to show from the array goBig
+        foreach (GameObject go in goBig)
+        {
+            if(go.name == name){
+                go.SetActive(true);
+                currentBigObject = go;
+            }   
+        }
     }
 }
 

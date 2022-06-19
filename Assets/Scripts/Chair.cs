@@ -14,14 +14,15 @@ private bool keyActivated = false;
             keyActivated = true;
         }
         else if (!isBig){
-            //cambiar posicion de la camara
+            //Activate big object
+            GameController.showObject("ChairBig");
+            //Change the position of the camera
             Arrow.rotar = false;
             mainCamera.transform.position = objectCameraPosition;
         }
         else {
             Debug.Log("Nada que hacer");
         }
-        Debug.Log("Clicked");
         
     }
 
