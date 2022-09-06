@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GameController : MonoBehaviour
     public static GameObject[] goBack;
     public static GameObject[] goBig;
     public static GameObject luz;
+    public static bool door_lock = true;
     //luz publica
 
     //private static string currentObjectTag = "";
@@ -43,6 +45,11 @@ public class GameController : MonoBehaviour
             {
                 go.SetActive(false);
             }
+    }
+    
+    public void Update(){
+        if( Input.GetKeyDown( KeyCode.R ) )
+           SceneManager.LoadScene( SceneManager.GetActiveScene().name );
     }
 
     public static void rotar(){

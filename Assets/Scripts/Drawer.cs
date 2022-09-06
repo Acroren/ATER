@@ -15,6 +15,7 @@ public class Drawer: Furniture
                 DrawerOpenned = true;
                 //GameController.showObject("Drawer");
                 Key.activateNote();
+                Hint2.activateNote();
                 Debug.Log("El cajón se ha abierto");
             }
             else{

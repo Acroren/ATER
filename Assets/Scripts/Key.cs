@@ -26,7 +26,7 @@ public class Key : Button
         if (llave == true){
             Debug.Log("Es una llave");
         } else if (note == true){
-            Debug.Log("Es una nota, en la que aparece un simbolo de un 0, junto a un texto que pone: Fila 4. Y otra imagen que sale un símbolo y el número 1");
+            Debug.Log("Es una nota, en la que aparece un simbolo de una K.");
         }
 
     }

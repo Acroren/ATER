@@ -9,7 +9,7 @@ private bool keyActivated = false;
     override public void onClickAction(){
         //si es grande
         if (isBig && !keyActivated){
-            
+            Variables.door_lock=false;
             Key.activateKey();
             keyActivated = true;
         }
