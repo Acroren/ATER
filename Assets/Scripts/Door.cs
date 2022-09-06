@@ -23,7 +23,7 @@ public class Door: Furniture
         else {
           sounds[2].Play();
           Debug.Log("Cambiando escena"); 
-          SceneManager.LoadScene("Menu");  
+          SceneManager.LoadScene("End");  
         }
     }
 

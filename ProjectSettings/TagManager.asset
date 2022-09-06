@@ -13,6 +13,7 @@ TagManager:
   - BIGChair
   - BIGDesk
   - BIG
+  - Key
   layers:
   - Default
   - TransparentFX

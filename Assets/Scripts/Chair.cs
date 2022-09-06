@@ -5,11 +5,22 @@ using UnityEngine;
 public class Chair: Furniture
 {
 
-private bool keyActivated = false;
+    private bool keyActivated = false;
+    public GameObject keyModel, sign;
+    private AudioSource source;
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
     override public void onClickAction(){
         //si es grande
         if (isBig && !keyActivated){
             Variables.door_lock=false;
+            sign.SetActive(true);
+            StartCoroutine(wait());
+            source.Play();
+
+            keyModel.SetActive(false);
             Key.activateKey();
             keyActivated = true;
         }
@@ -21,10 +32,13 @@ private bool keyActivated = false;
             mainCamera.transform.position = objectCameraPosition;
         }
         else {
-            Debug.Log("Nada que hacer");
+            sign.SetActive(false);
         }
         
     }
-
-
+    IEnumerator wait()  //  <-  its a standalone method
+    {
+        yield return new WaitForSeconds(1);
+        sign.SetActive(false);
+    }
 }

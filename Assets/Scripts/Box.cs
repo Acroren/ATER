@@ -6,6 +6,7 @@ public class Box: Furniture
 {
     private bool BoxOpenned = false;
     public Color originalColor;
+    public GameObject sign;
     public static AudioSource[] sounds;
     void Awake()
     {
@@ -18,9 +19,10 @@ public class Box: Furniture
             if (!BoxOpenned){
                 sounds[1].Play();
                 BoxOpenned = true;
-                //GameController.showObject("Drawer");
+                sign.SetActive(true);
+                StartCoroutine(wait());
                 Hint3.activateNote();
-                Debug.Log("Taratatata");
+                
             }
             else {
                 Debug.Log("Está abierto");
@@ -38,6 +40,12 @@ public class Box: Furniture
 
     override public void exitZone(){
         render.material.color= originalColor;
+    }
+
+    IEnumerator wait()  //  <-  its a standalone method
+    {
+        yield return new WaitForSeconds(1);
+        sign.SetActive(false);
     }
 }
 
