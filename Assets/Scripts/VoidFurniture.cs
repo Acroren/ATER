@@ -19,10 +19,6 @@ public class VoidFurniture: Furniture
             }
             mainCamera.transform.position = objectCameraPosition;
         }
-        else {
-            Debug.Log("Nada que hacer");
-        }
-        
     }
 
 

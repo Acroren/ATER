@@ -17,9 +17,6 @@ public class Button : MonoBehaviour, IClicked
     }
 
     virtual public void onClickAction(){
-        if (actited == true){
-            Debug.Log("Clicked");
-        }
         
     }
 

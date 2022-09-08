@@ -47,11 +47,6 @@ public class GameController : MonoBehaviour
             }
     }
     
-    public void Update(){
-        if( Input.GetKeyDown( KeyCode.R ) )
-           SceneManager.LoadScene( SceneManager.GetActiveScene().name );
-    }
-
     public static void rotar(){
         if (frente == true){
             mainCamera.transform.rotation = Quaternion.Euler(25, 180, 0);
@@ -107,15 +102,3 @@ public class GameController : MonoBehaviour
         }
     }
 }
-
-/*
-public class Globals
-{
-    private static Camera mainCamera;
-
-    private void Awake() {
-        mainCamera = Camera.main;
-    }
-    
-}
-*/

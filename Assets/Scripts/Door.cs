@@ -18,26 +18,21 @@ public class Door: Furniture
     override public void onClickAction(){
         if (door_lock) {
             sounds[0].Play();
-            Debug.Log("Locked"); 
         }   
         else {
           sounds[2].Play();
-          Debug.Log("Cambiando escena"); 
           SceneManager.LoadScene("End");  
         }
     }
 
     public static void updatePass(int value){
         passCounter += value;
-        Debug.Log("Valor" + passCounter);
         if(passCounter == 3){
             sounds[0].Play();
-            Debug.Log("Puerta abierta");
             door_lock = false;
             //play song
         } else if (!door_lock) {
             sounds[1].Play();
-            Debug.Log("Puerta bloqueada");
             door_lock=true;
             }
     }

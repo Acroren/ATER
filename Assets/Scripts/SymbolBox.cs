@@ -15,8 +15,6 @@ public class SymbolBox : Furniture
     }
 
     override public void onClickAction(){
-      //  if(SafeController.open){
-            //si el symbolo no está presionado
             source.Play();
             if (!SymbolPressed){
                 SymbolPressed = true;
@@ -32,13 +30,6 @@ public class SymbolBox : Furniture
             }    
       //  }
         
-    }
-    override public void enterZone(){
-        render.material.color=Color.black;
-    }
-
-    override public void exitZone(){
-        render.material.color= Color.white;
     }
 }
 

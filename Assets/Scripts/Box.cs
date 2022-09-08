@@ -13,7 +13,6 @@ public class Box: Furniture
         sounds = GetComponents<AudioSource>();
     }
 
-
     override public void onClickAction(){
         if(SafeController.open==true){
             if (!BoxOpenned){
@@ -24,22 +23,9 @@ public class Box: Furniture
                 Hint3.activateNote();
                 
             }
-            else {
-                Debug.Log("Está abierto");
-            }
         } else {
             sounds[0].Play();
-            Debug.Log("Está cerrado");
         }
-        
-        
-    }
-    override public void enterZone(){
-        render.material.color=Color.black;
-    }
-
-    override public void exitZone(){
-        render.material.color= originalColor;
     }
 
     IEnumerator wait()  //  <-  its a standalone method

@@ -39,9 +39,6 @@ public class SafeController : MonoBehaviour
                     lights[i].GetComponent<Renderer>().material.color= Color.green;
                 }
                 open=true;
-                //renderL = lights[0].GetComponent<Renderer>();
-                //renderL.material.color= Color.red;
-
                 
             } else {
                 sounds[0].Play();

@@ -1535,8 +1535,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Exit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4bdafa92b56a2654b90e8c529fd73cfb, type: 2}
-  m_sharedMaterial: {fileID: 5824639401308161879, guid: 4bdafa92b56a2654b90e8c529fd73cfb,
+  m_fontAsset: {fileID: 11400000, guid: 493137ff7414d6e49a85f754545b1ab7, type: 2}
+  m_sharedMaterial: {fileID: 7520574261439442555, guid: 493137ff7414d6e49a85f754545b1ab7,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1562,13 +1562,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70.6
+  m_fontSize: 75
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
   m_fontSizeMax: 100
-  m_fontStyle: 16
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2499,8 +2499,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Congratulations you have escaped from the room
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4bdafa92b56a2654b90e8c529fd73cfb, type: 2}
-  m_sharedMaterial: {fileID: 5824639401308161879, guid: 4bdafa92b56a2654b90e8c529fd73cfb,
+  m_fontAsset: {fileID: 11400000, guid: 493137ff7414d6e49a85f754545b1ab7, type: 2}
+  m_sharedMaterial: {fileID: 7520574261439442555, guid: 493137ff7414d6e49a85f754545b1ab7,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2526,13 +2526,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 71.05
+  m_fontSize: 75.75
   m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
   m_fontSizeMax: 100
-  m_fontStyle: 16
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

@@ -13,9 +13,7 @@ public class Chair: Furniture
         source = GetComponent<AudioSource>();
     }
     override public void onClickAction(){
-        //si es grande
         if (isBig && !keyActivated){
-            Variables.door_lock=false;
             sign.SetActive(true);
             StartCoroutine(wait());
             source.Play();
@@ -25,9 +23,7 @@ public class Chair: Furniture
             keyActivated = true;
         }
         else if (!isBig){
-            //Activate big object
             GameController.showObject("ChairBig");
-            //Change the position of the camera
             Arrow.rotar = false;
             mainCamera.transform.position = objectCameraPosition;
         }

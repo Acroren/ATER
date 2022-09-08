@@ -12,18 +12,10 @@ public class PasswordKey : Furniture
     {
         source = GetComponent<AudioSource>();
     }
-
     override public void onClickAction(){
         //si el symbolo no está presionado
         source.Play(); 
         SafeController.press(value);
-    }
-    override public void enterZone(){
-        render.material.color=Color.black;
-    }
-
-    override public void exitZone(){
-        render.material.color= Color.white;
     }
 }
 

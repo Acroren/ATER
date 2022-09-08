@@ -17,12 +17,6 @@ public class Hint2 : Button
         spriteNoteAux = spriteNote;
     }
 
-    override public void onClickAction(){
-    if (note == true){
-            Debug.Log("Es una nota, en la que aparece un simbolo de una I");
-        }
-
-    }
     static public void activateNote(){
         note = true;
         spriteNoteAux.SetActive(true);

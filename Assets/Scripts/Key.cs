@@ -22,33 +22,21 @@ public class Key : Button
         spriteNoteAux = spriteNote;
     }
 
-    override public void onClickAction(){
-        if (llave == true){
-            Debug.Log("Es una llave");
-        } else if (note == true){
-            Debug.Log("Es una nota, en la que aparece un simbolo de una K.");
-        }
-
-    }
-
     static public void activateKey(){
         llave = true;
         spriteKeyAux.SetActive(true);
-        Debug.Log("Has activado la llave");
     }
 
 
     static public void desactivaKey(){
         llave = false;
         spriteKeyAux.SetActive(false);
-        Debug.Log("Has usado la llave");
     }
 
     static public void activateNote(){
         desactivaKey();
         note = true;
         spriteNoteAux.SetActive(true);
-        Debug.Log("Has encontrado una nota");
     }
 
     override public void enterZone(){

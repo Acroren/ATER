@@ -61,6 +61,9 @@ public class CursorController : MonoBehaviour
     
     private void Update()
     {
+        if( Input.GetKeyDown( KeyCode.Escape) )
+           Cursor.lockState = CursorLockMode.None;
+
         IClicked click = DetectObject();
         if (click != lastClick && lastClick != null){
             lastClick.exitZone();
